@@ -95,7 +95,6 @@ function titleCase(str) {
             let likes = $("input[name=likes]:checked").val();
             let eats = $("input[name=eats]:checked").val();
          let pet = "";
-<<<<<<< HEAD
 
             if(feels == "scaly" && likes == "petted" && eats == "pets"){
               pet = "bird";}
@@ -138,50 +137,6 @@ function titleCase(str) {
                alert('Error - ' + errorMessage);
            });
 
-=======
-
-            if(feels == "scaly" && likes == "petted" && eats == "pets"){
-              pet = "bird";}
-            if(feels == "scaly" && likes == "ridden" && eats == "carrots"){
-              pet = "cat";}
-            if(feels == "fluffy" && likes == "ridden" && eats == "carrots"){
-              pet = "dane";}
-            if(feels == "fluffy" && likes == "ridden" && eats == "pets"){
-              pet = "greyhound";}
-            if(feels == "scaly" && likes == "petted" && eats == "carrots"){
-              pet = "hedgehog";}
-            if(feels=="fluffy" && likes=="petted" && eats=="carrots"){
-              pet = "rabbit";}
-            if(feels=="scaly" && likes=="ridden" && eats=="pets"){
-              pet = "velociraptor";}
-             
-          //  alert(feels);
-                    // where we will store all data to show          
-            var output = '';        
- output += `<p> Congratualtion! yoy have a new pet ${pet}.</p>`;  
-            output += `<p> Your pet feels   ${feels}.</p>`;   
-            
-            output += `<p> Your pet likes to be ${likes}.</p>`;  
-            
-            output += `<p> Your pet eats to be ${eats}.</p>`; 
-             output += `<p> Your name is ${titleName}.</p>`; 
-
-         
-              	$.get( "includes/get_pet.php", { critter:pet} )
-             
-              .done(function( data ) {
-            //alert( "Data Loaded: " + data );
-            
-           $('#output').html(data + output);
-
-          })
-          .fail(function(xhr, status, error) {
-               //Ajax request failed.
-               var errorMessage = xhr.status + ': ' + xhr.statusText
-               alert('Error - ' + errorMessage);
-           });
-
->>>>>>> origin/main
 //lets output info about the pet to the page
        
         });
@@ -191,4 +146,3 @@ function titleCase(str) {
    </script>
 </body>
 </html>
-
